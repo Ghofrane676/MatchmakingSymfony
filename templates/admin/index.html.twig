@@ -1,0 +1,289 @@
+{% extends 'layout/layout.html.twig' %}
+{% block body %}
+	<div class="main-content">
+		<div class="main-content-inner">
+			<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+				<ul class="breadcrumb">
+					<li>
+						<i class="ace-icon fa fa-home home-icon"></i>
+						<a href="#">Accueil</a>
+					</li>
+					<li class="active">Tableau de bord</li>
+				</ul>
+				<!-- /.breadcrumb -->
+
+				<div class="nav-search" id="nav-search">
+					<form class="form-search">
+						<span class="input-icon">
+							<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off"/>
+							<i class="ace-icon fa fa-search nav-search-icon"></i>
+						</span>
+					</form>
+				</div>
+				<!-- /.nav-search -->
+			</div>
+			<!-- /.ace-settings-box -->
+
+			<!-- /.ace-settings-container -->
+
+			<div class="page-header">
+				<h1>
+					Tableau de bord
+					<small></small>
+				</h1>
+			</div>
+			<!-- /.page-header -->
+
+
+			<div class="col-xs-12">
+
+
+				<div class="col-sm-12">
+					<div class="card card-body">
+						<div class="col col-lg-4">
+							<div class="card text-white bg-success mb-3" style="width: 25rem;">
+								<div class="card-body nbrE">
+									<div class="row">
+										<div class="col-4" style="margin: -3px 30px">
+											<h1 style="font-size:300%">
+												<i class="ace-icon fa fa-search nav-search-icon"></i>
+											</h1>
+										</div>
+										<div class="col-8">
+											<p style="font-size:300%;margin: -70px 0px 0px 100px">
+												<b>{{entreprisenbr}}</b>
+											</p>
+											<p style="font-size:140%;margin: -12px 0px -9px 100px">
+												Nombre Entreprise
+											</p>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-lg-4">
+							<div class="card text-white bg-success mb-3" style="width: 25rem;">
+								<div class="card-body nbrP">
+									<div class="row">
+										<div class="col-4" style="margin: -3px 30px">
+											<h1 style="font-size:300%">
+												<i class="ace-icon fa fa-search nav-search-icon"></i>
+											</h1>
+										</div>
+										<div class="col-8">
+											<p style="font-size:300%;margin: -70px 0px 0px 100px">
+												<b>{{employenbr}}</b>
+											</p>
+											<p style="font-size:140%;margin: -12px 0px -9px 100px">
+												Nombre Employe
+											</p>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-lg-4">
+							<div class="card text-white bg-success mb-3" style="width: 25rem;">
+								<div class="card-body nbrDOC">
+									<div class="row">
+										<div class="col-4" style="margin: -3px 30px">
+											<h1 style="font-size:300%">
+												<i class="ace-icon fa fa-search nav-search-icon"></i>
+											</h1>
+										</div>
+										<div class="col-8">
+											<p style="font-size:300%;margin: -70px 0px 0px 100px">
+												<b>{{participantnbr}}</b>
+											</p>
+											<p style="font-size:140%;margin: -12px 0px -9px 100px">
+												Nombre Participant
+											</p>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+						</div>
+
+						<div class="card card-body">
+							<div class="col col-lg-2"></div>
+							<div class="col col-lg-4">
+								<div class="card text-white bg-success mb-3" style="width: 25rem;">
+									<div class="card-body nbrDoc">
+										<div class="row">
+											<div class="col-4" style="margin: -3px 30px">
+												<h1 style="font-size:300%">
+													<i class="ace-icon fa fa-search nav-search-icon"></i>
+												</h1>
+											</div>
+											<div class="col-8">
+												<p style="font-size:300%;margin: -70px 0px 0px 100px">
+													<b>{{saloneditionbr}}</b>
+												</p>
+												<p style="font-size:140%;margin: -12px 0px -9px 100px">
+													Nombre des éditions
+												</p>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-lg-4">
+								<div class="card text-white bg-success mb-3" style="width: 25rem;">
+									<div class="card-body nbrDOS">
+										<div class="row">
+											<div class="col-4" style="margin: -3px 30px">
+												<h1 style="font-size:300%">
+													<i class="ace-icon fa fa-search nav-search-icon"></i>
+												</h1>
+											</div>
+											<div class="col-8">
+												<p style="font-size:300%;margin: -70px 0px 0px 100px">
+													<b>{{salonnbr}}</b>
+												</p>
+												<p style="font-size:140%;margin: -12px 0px -9px 100px">
+													Nombre des salons
+												</p>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-4">
+					<div class="widget-box">
+						<div class="widget-header widget-header-flat widget-header-small">
+							<h5 class="widget-title">
+								<i class="ace-icon fa fa-signal"></i>
+								Statistiques des entreprises
+							</h5>
+
+							<div class="widget-toolbar no-border">
+								<div class="inline dropdown-hover">
+									<button class="btn btn-minier btn-primary">
+									Cette semaine
+										<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+									</button>
+
+									<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+										<li class="active">
+											<a href="#" class="blue">
+												<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
+												Cette semaine
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+												La semaine dernière
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+											Ce mois
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+												Le mois dernier
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<div id="piechart-placeholder"></div>
+
+								<div class="hr hr8 hr-double"></div>
+							</div>
+							<!-- /.widget-main -->
+						</div>
+						<!-- /.widget-body -->
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-4">
+					<div class="widget-box">
+						<div class="widget-header widget-header-flat widget-header-small">
+							<h5 class="widget-title">
+								<i class="ace-icon fa fa-signal"></i>
+								Statistiques des participants
+							</h5>
+
+							<div class="widget-toolbar no-border">
+								<div class="inline dropdown-hover">
+									<button class="btn btn-minier btn-primary">
+										Cette semaine
+										<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+									</button>
+
+									<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+										<li class="active">
+											<a href="#" class="blue">
+												<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
+											Cette semaine
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+											La semaine dernière
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+												Ce mois
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+												Le mois dernier
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<div id="piechart-placeholde"></div>
+
+								<div class="hr hr8 hr-double"></div>
+							</div>
+							<!-- /.widget-main -->
+						</div>
+						<!-- /.widget-body -->
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+				<!--/.col-->
+			<!--/.row-->
+				<!--PAGECONTENTENDS-->
+			</div>
+		</div>
+		<!-- /.col -->
+
+	{% endblock %}

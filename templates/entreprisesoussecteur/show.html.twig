@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entreprisesoussecteur{% endblock %}
+
+{% block body %}
+    <h1>Entreprisesoussecteur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Sssecteurreference</th>
+                <td>{{ entreprisesoussecteur.sssecteurreference }}</td>
+            </tr>
+            <tr>
+                <th>Secteurreference</th>
+                <td>{{ entreprisesoussecteur.secteurreference }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ entreprisesoussecteur.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entreprisesoussecteur.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('entreprisesoussecteur_index') }}">back to list</a>
+
+    <a href="{{ path('entreprisesoussecteur_edit', {'sssecteurreference': entreprisesoussecteur.sssecteurreference}) }}">edit</a>
+
+    {{ include('entreprisesoussecteur/_delete_form.html.twig') }}
+{% endblock %}

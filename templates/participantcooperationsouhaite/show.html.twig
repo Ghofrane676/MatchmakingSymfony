@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participantcooperationsouhaite{% endblock %}
+
+{% block body %}
+    <h1>Participantcooperationsouhaite</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ participantcooperationsouhaite.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ participantcooperationsouhaite.description }}</td>
+            </tr>
+            <tr>
+                <th>Coopsouhaitereference</th>
+                <td>{{ participantcooperationsouhaite.coopsouhaitereference }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('participantcooperationsouhaite_index') }}">back to list</a>
+
+    <a href="{{ path('participantcooperationsouhaite_edit', {'coopsouhaitereference': participantcooperationsouhaite.coopsouhaitereference}) }}">edit</a>
+
+    {{ include('participantcooperationsouhaite/_delete_form.html.twig') }}
+{% endblock %}

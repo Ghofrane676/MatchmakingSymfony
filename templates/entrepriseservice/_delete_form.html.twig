@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('entrepriseservice_delete', {'reference': entrepriseservice.reference}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ entrepriseservice.reference) }}">
+	<button class="btn"><img src="https://img.icons8.com/material-rounded/22/fa314a/trash.png"/></button>
+</form>

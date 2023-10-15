@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+				B2B
+			{% endblock %}
+		</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta charset="utf-8"/>
+		<meta name="description" content="overview &amp; stats"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		{% block stylesheets %}
+			<!-- CSS
+																																																												    ================================================== -->
+			<!-- bootstrap & fontawesome -->
+
+			<!-- page specific plugin styles -->
+
+			<!-- text fonts -->
+			<link
+			rel="stylesheet" href="{{ asset('assets1') }}/css/fonts.googleapis.com.css"/> <!-- ace styles -->
+			<link
+			rel="stylesheet" href="{{ asset('assets1') }}/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+
+			<!--[if lte IE 9]>
+																																																						    <link rel="stylesheet" href="{{ asset('assets1') }}/css/ace-part2.min.css" class="ace-main-stylesheet" />
+																																																						    <![endif]-->
+			<link rel="stylesheet" href="{{ asset('assets1') }}/css/ace-skins.min.css"/>
+			<link rel="stylesheet" href="{{ asset('assets1') }}/css/ace-rtl.min.css"/>
+
+		<!--[if lte IE 9]>
+																																				    <link rel="stylesheet" href="{{ asset('assets1') }}/css/ace-ie.min.css" />
+																																				    <![endif]-->
+			<!-- script
+																																																											            ================================================== -->
+
+		{% endblock %}
+	</head>
+	<body id="top">
+
+
+		<section class="s-bricks"> {% block body %}{% endblock %}
+			</section>
+
+			{{ include('include/footer.html.twig') }}
+
+			{% block javascripts %}
+				<!-- Java Script
+																																																																			 ================================================== -->
+
+				<script src="assets1/js/jquery-2.1.4.min.js"></script>
+
+				<!-- <![endif]-->
+
+				<!--[if IE]>
+																																																																			<script src="assets1/js/jquery-1.11.3.min.js"></script>
+																																																																			<![endif]-->
+				<script type="text/javascript">
+					if ('ontouchstart' in document.documentElement) 
+document.write("<script src='assets1/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+				</script>
+				<script src="assets1/js/bootstrap.min.js"></script>
+
+				<!-- page specific plugin scripts -->
+
+			<!--[if lte IE 8]>
+																																																																  <script src="assets1/js/excanvas.min.js"></script>
+																																																																<![endif]-->
+
+
+				<!-- inline scripts related to this page -->
+			</body>
+		</html>
+	{% endblock %}

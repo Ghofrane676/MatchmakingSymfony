@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salonedition{% endblock %}
+
+{% block body %}
+    <h1>Salonedition</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Editionrefrence</th>
+                <td>{{ salonedition.editionrefrence }}</td>
+            </tr>
+            <tr>
+                <th>Salonreference</th>
+                <td>{{ salonedition.salonreference }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ salonedition.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Datedebut</th>
+                <td>{{ salonedition.datedebut ? salonedition.datedebut|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Nombrejour</th>
+                <td>{{ salonedition.nombrejour }}</td>
+            </tr>
+            <tr>
+                <th>Datefin</th>
+                <td>{{ salonedition.datefin ? salonedition.datefin|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Heuredebutparjour</th>
+                <td>{{ salonedition.heuredebutparjour ? salonedition.heuredebutparjour|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Heurefinparjour</th>
+                <td>{{ salonedition.heurefinparjour ? salonedition.heurefinparjour|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dureerencontre</th>
+                <td>{{ salonedition.dureerencontre }}</td>
+            </tr>
+            <tr>
+                <th>Debutrepas</th>
+                <td>{{ salonedition.debutrepas ? salonedition.debutrepas|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dureerepas</th>
+                <td>{{ salonedition.dureerepas }}</td>
+            </tr>
+            <tr>
+                <th>Finrepas</th>
+                <td>{{ salonedition.finrepas ? salonedition.finrepas|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Debutpausecafeam</th>
+                <td>{{ salonedition.debutpausecafeam ? salonedition.debutpausecafeam|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dureepausecafeam</th>
+                <td>{{ salonedition.dureepausecafeam }}</td>
+            </tr>
+            <tr>
+                <th>Finpausecafeam</th>
+                <td>{{ salonedition.finpausecafeam ? salonedition.finpausecafeam|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Debutpausecafepm</th>
+                <td>{{ salonedition.debutpausecafepm ? salonedition.debutpausecafepm|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dureepausecafepm</th>
+                <td>{{ salonedition.dureepausecafepm }}</td>
+            </tr>
+            <tr>
+                <th>Finpausecafepm</th>
+                <td>{{ salonedition.finpausecafepm ? salonedition.finpausecafepm|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Datelimiteinscription</th>
+                <td>{{ salonedition.datelimiteinscription ? salonedition.datelimiteinscription|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Datelimiterencontre</th>
+                <td>{{ salonedition.datelimiterencontre ? salonedition.datelimiterencontre|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Maxrencontre</th>
+                <td>{{ salonedition.maxrencontre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('salonedition_index') }}">back to list</a>
+
+    <a href="{{ path('salonedition_edit', {'editionrefrence': salonedition.editionrefrence}) }}">edit</a>
+
+    {{ include('salonedition/_delete_form.html.twig') }}
+{% endblock %}

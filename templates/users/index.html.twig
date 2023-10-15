@@ -1,0 +1,239 @@
+{% extends 'base1.html.twig' %}
+{% block body %}
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!------ Include the above in your HEAD tag ---------->
+
+	<style>
+
+
+		body {
+			padding-top: 68px;
+			padding-bottom: 50px;
+		}
+		.image-container {
+			position: relative;
+		}
+
+		.image {
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: 0.5s ease;
+			backface-visibility: hidden;
+		}
+
+		.middle {
+			transition: 0.5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.image-container:hover .image {
+			opacity: 0.3;
+		}
+
+		.image-container:hover .middle {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css"/>
+	<div>
+		<section class="content-header">
+			<div class="container-fluid">
+				<div class="row mb-2">
+					<div class="col-sm-6"></div>
+					<div class="col-sm-6">
+						<ol class="breadcrumb float-sm-right">
+							<li class="breadcrumb-item">
+								<a href="/admin/">Accueil</a>
+							</li>
+							<li class="breadcrumb-item active">Profil</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+
+						<div class="card-body">
+							<div class="card-title mb-4">
+								<div class="d-flex justify-content-start">
+									<div class="image-container">
+										<img src="http://placehold.it/150x150" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail"/>
+										<div class="middle">
+											<input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change"/>
+											<input type="file" style="display: none;" id="profilePicture" name="file"/>
+										</div>
+									</div>
+									<div class="userData ml-3">
+										<h2 class="d-block" style="font-size: 1.5rem; font-weight: bold">
+											<a href="javascript:void(0);">{{ app.user.firstname }}
+												{{ app.user.lastname }}</a>
+										</h2>
+
+									</div>
+									<div class="ml-auto">
+										<input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true" class="active">Basic Info</a>
+										</li>
+
+
+									</a>
+								</li>
+							</ul>
+							<div class="tab-content ml-1" id="myTabContent">
+								<div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Nom</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.firstname }}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Prénom</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.lastname }}
+										</div>
+									</div>
+									<hr/>
+
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Email</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.email }}
+										</div>
+									</div>
+									<hr/>
+
+
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Adresse</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.adresse }}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Site web</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.siteweb }}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Sociéte</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.societe }}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-sm-3 col-md-2 col-5">
+											<label style="font-weight:bold;">Pays</label>
+										</div>
+										<div class="col-md-8 col-6">
+											{{ app.user.pays }}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-12">
+
+											<li class="nav-item">
+
+												<a href="{{ path('users_profil_modifier') }}">Modifier le profil</a>
+											</li>
+											<li class="nav-item">
+												<a href="{{ path('users_pass_modifier')}}">Modifier le mot de passe</a>
+											</li>
+										</a>
+									</li>
+								</a>
+
+
+							</div>
+							<div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+								Facebook, Google, Twitter Account that are connected to this account
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</div></div><script>
+$(document).ready(function () {
+$imgSrc = $('#imgProfile').attr('src');
+function readURL(input) {
+
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+
+reader.onload = function (e) {
+$('#imgProfile').attr('src', e.target.result);
+};
+
+reader.readAsDataURL(input.files[0]);
+}
+}
+$('#btnChangePicture').on('click', function () { // document.getElementById('profilePicture').click();
+if (!$('#btnChangePicture').hasClass('changing')) {
+$('#profilePicture').click();
+} else { // change
+}
+});
+$('#profilePicture').on('change', function () {
+readURL(this);
+$('#btnChangePicture').addClass('changing');
+$('#btnChangePicture').attr('value', 'Confirm');
+$('#btnDiscard').removeClass('d-none');
+// $('#imgProfile').attr('src', '');
+});
+$('#btnDiscard').on('click', function () { // if ($('#btnDiscard').hasClass('d-none')) {
+$('#btnChangePicture').removeClass('changing');
+$('#btnChangePicture').attr('value', 'Change');
+$('#btnDiscard').addClass('d-none');
+$('#imgProfile').attr('src', $imgSrc);
+$('#profilePicture').val('');
+// }
+});
+});</script>{% endblock %}

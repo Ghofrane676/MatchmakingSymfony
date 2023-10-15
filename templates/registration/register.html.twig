@@ -1,0 +1,245 @@
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="widtd=device-widtd, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="autdor" content="">
+
+		<title>B2B</title>
+
+		<!-- Custom fonts for tdis template-->
+		<link href="../bundles/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link
+		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for tdis template-->
+		<link href="../bundles/css/sb-admin-2.min.css" rel="stylesheet">
+		<style>
+			.agree {
+				margin-left: 79px;
+			}
+			.submit {
+				margin-top: -20px;
+				margin-left: 250px;
+			}
+			.col-form-label {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+
+
+	<body class="bg-gradient">
+		<div
+			class="">
+
+			<!-- Outer Row -->
+			<div class="row justify-content-">
+
+				<div class="col-xl-12 col-lg-14 col-md-12">
+
+					<div class="card o-hidden border-14 shadow-lg my-8">
+						<div
+							class="card-body p-5">
+							<!-- Nested Row witdin Card Body -->
+							<div class="row">
+								<div class="col-lg-6" class="login100-pic js-tilt" data-tilt><img src="../bundles/assets/img/logo/1356927777-ConvertImage (1).jpg" alt="IMG"></div>
+								<div class="col-lg-6">
+									<div class="p-4">
+										<div class="text-center">
+											<h1 class="h1 mb-3 font-weight-normal">Inscrivez vous s'il vous plait
+											</h1>
+											{% for flashError in app.flashes('verify_email_error') %}
+												<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+											{% endfor %}
+											{{ form_start(registrationForm) }}
+
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.firstname) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.firstname) }}
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="myselect">{{ form_label(registrationForm.lastname) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.lastname) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="form-group row">
+														<div class="col-sm-2 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.email) }}</label>
+														</div>
+														<div class="col-sm-9">
+															{{ form_widget(registrationForm.email) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.societe) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.societe) }}
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.adresse) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.adresse) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.pays) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.pays) }}
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.siteweb) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.siteweb) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.password.first) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.password.first,{'class': 'form-control'}) }}
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.password.second) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.password.second) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 col-form-label">
+															<label for="titre">{{ form_label(registrationForm.roles) }}</label>
+														</div>
+														<div class="col-sm-8">
+															{{ form_widget(registrationForm.roles) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group row">
+														<div class="col-sm-4 agree">
+															{{ form_widget(registrationForm.agreeTerms) }}
+															{{ form_label(registrationForm.agreeTerms) }}
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="submit">
+												<div class="text-center">
+													<button class="btn btn-primary btn-user btn-submit" type="submit">
+														S'inscrire
+													</button>
+													{{ form_end(registrationForm) }}
+												</div>
+												<div class="text-center">
+													<a href="login">J'ai un compte !</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</body>
+			<!-- Bootstrap core JavaScript-->
+			<script src="../bundles/vendor/jquery/jquery.min.js"></script>
+			<script src="../bundles/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+			<!-- Core plugin JavaScript-->
+			<script src="../bundles/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+			<!-- Custom scripts for all pages-->
+			<script src="../bundles/js/sb-admin-2.min.js"></script>
+			<!--===============================================================================================-->
+			<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+			<script src="assets3/vendor/jquery/jquery-3.2.1.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="assets3/vendor/bootstrap/js/popper.js"></script>
+			<script src="assets3/vendor/bootstrap/js/bootstrap.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="assets3/vendor/select2/select2.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="assets3/vendor/tilt/tilt.jquery.min.js"></script>
+			<script>
+				$('.js-tilt').tilt({scale: 1.1})
+			</script>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-23581568-13');
+			</script>
+
+			<!--===============================================================================================-->
+			<script src="assets3/js/main.js"></script>
+
+			<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;655a21eb2e1fb781&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2021.5.1&quot;,&quot;si&quot;:10}"></script>
+
+		</body>
+	</body>
+</html></body></html></body></html></html>

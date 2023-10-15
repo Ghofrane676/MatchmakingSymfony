@@ -1,0 +1,57 @@
+{% extends 'base1.html.twig' %}
+
+{% block title %}Participant index{% endblock %}
+
+{% block body %}
+    <h1>Participant index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Participantreference</th>
+                <th>Entreprisereference</th>
+                <th>Participantfonctionreference</th>
+                <th>Participantservicereference</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Photoprofil</th>
+                <th>Civilite</th>
+                <th>Telephone</th>
+                <th>Fax</th>
+                <th>Gsm</th>
+                <th>Linkedin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td>{{ participant.participantreference }}</td>
+                <td>{{ participant.entreprisereference }}</td>
+                <td>{{ participant.participantfonctionreference }}</td>
+                <td>{{ participant.participantservicereference }}</td>
+                <td>{{ participant.nom }}</td>
+                <td>{{ participant.prenom }}</td>
+                <td>{{ participant.email }}</td>
+                <td>{{ participant.photoprofil }}</td>
+                <td>{{ participant.civilite }}</td>
+                <td>{{ participant.telephone }}</td>
+                <td>{{ participant.fax }}</td>
+                <td>{{ participant.gsm }}</td>
+                <td>{{ participant.linkedin }}</td>
+                <td>
+                    <a href="{{ path('participant_show', {'participantreference': participant.participantreference}) }}">show</a>
+                    <a href="{{ path('participant_edit', {'participantreference': participant.participantreference}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('participant_new') }}">Create new</a>
+{% endblock %}

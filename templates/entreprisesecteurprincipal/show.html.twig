@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entreprisesecteurprincipal{% endblock %}
+
+{% block body %}
+    <h1>Entreprisesecteurprincipal</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Secteurpincipalreference</th>
+                <td>{{ entreprisesecteurprincipal.secteurpincipalreference }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ entreprisesecteurprincipal.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entreprisesecteurprincipal.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('entreprisesecteurprincipal_index') }}">back to list</a>
+
+    <a href="{{ path('entreprisesecteurprincipal_edit', {'secteurpincipalreference': entreprisesecteurprincipal.secteurpincipalreference}) }}">edit</a>
+
+    {{ include('entreprisesecteurprincipal/_delete_form.html.twig') }}
+{% endblock %}

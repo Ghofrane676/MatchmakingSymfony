@@ -1,0 +1,14 @@
+{% extends 'base1.html.twig' %}
+
+{% block title %}Edit Salonedition
+{% endblock %}
+
+{% block body %}
+	<h1>Edit Salonedition</h1>
+
+	{{ include('salonedition/_form.html.twig', {'button_label': 'Update'}) }}
+
+	<a href="{{ path('salonedition_index') }}">back to list</a>
+
+	{{ include('salonedition/_delete_form.html.twig') }}
+{% endblock %}

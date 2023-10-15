@@ -1,0 +1,301 @@
+<div id="sidebar" class="sidebar responsiveb ace-save-state">
+	<script type="text/javascript">
+		try {
+ace.settings.loadState('sidebar')
+} catch (e) {}
+	</script>
+	<!-- /.sidebar-shortcuts -->
+	{% if is_granted('ROLE_COLLABORATEUR') %}
+		<ul class="nav nav-list">
+			<li class="active">
+				<a href="admin">
+					<i class="menu-icon fa fa-home"></i>
+					<span class="menu-text">
+						Accueil
+					</span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+
+			<li class="">
+				<a href="#" class="dropdown-toggle">
+					<i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;
+					<span class="menu-text">
+						Paramétrages</span>
+					<b class="arrow fa fa-angle-down"></b>
+				</a>
+				<b class="arrow"></b>
+				<ul class="submenu">
+					<li class="">
+						<a href="entreprisechiffreaffaire" class="dropdown-toggle">
+							<i class="menu-icon fa fa-caret-right"></i>
+
+							Gestion des chiffres d'affaires
+
+						</a>
+
+						<b class="arrow"></b>
+
+
+					</li>
+					<li class="">
+						<a href="entreprisenombreemploye">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion nombre employés
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="entrepriseservice">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion service entreprise
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="participantservice">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion Participants
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="participantcooperationsouhaite">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion cooperation souhaité
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="participantfoction">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion Fonction
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="pays">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion pays
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+				</li>
+			</li>
+			<li class="">
+				<a href="#" class="dropdown-toggle">
+					<i class="menu-icon fa fa-caret-right"></i>
+
+					Gestion des secteurs
+					<b class="arrow fa fa-angle-down"></b>
+				</a>
+
+				<b class="arrow"></b>
+
+				<ul class="submenu">
+					<li class="">
+						<a href="entreprisesecteurprincipal">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion secteur principale
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="entreprisesecteur">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion secteur
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+
+					<li class="">
+						<a href="entreprisesoussecteur">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Gestion sous secteur
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+
+				</ul>
+			</li>
+
+
+		</li>
+	</li>
+</ul></li><li class="">
+<a href="users">
+	<i class="menu-icon fa fa-user"></i>
+
+	<span class="menu-text">
+		Ma fiche
+
+		<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span>
+	</span>
+</a>
+
+<b class="arrow"></b></li><li class="">
+<a href="#">
+
+
+	<span class="menu-text">
+		Consulter fiche Entreprise
+
+		<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span>
+	</span>
+</a>
+
+<b class="arrow"></b></li><li class="">
+<a href="choix">
+
+
+	<span class="menu-text">
+		Gestion des choix de rencontres
+
+		<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span>
+	</span>
+</a>
+
+<b class="arrow"></b></li><li class="">
+<a href="calender">
+	<i class="menu-icon fa fa-calendar"></i>
+
+	<span class="menu-text">
+		Calendrier
+
+		<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span>
+	</span>
+</a>
+
+<b class="arrow"></b></li><li class="">
+<a href="widgets.html">
+	<i class="menu-icon fa fa-signal"></i>
+	<span class="menu-text">
+		Statistiques
+	</span>
+</a>
+
+<b class="arrow"></b></li></ul></li>{% endif %}{% if is_granted('ROLE_ADMINE') %}<ul class="nav nav-list"><li class="active"><a href="admin">
+<i class="menu-icon fa fa-home"></i>
+<span class="menu-text">
+	Accueil
+</span></a><b class="arrow"></b></li><li class=""><a href="#" class="dropdown-toggle">
+<i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;
+<span class="menu-text">
+	Paramétrages</span>
+<b class="arrow fa fa-angle-down"></b></a><b class="arrow"></b><ul class="submenu">
+<li class="">
+	<a href="entreprisechiffreaffaire" class="dropdown-toggle">
+		<i class="menu-icon fa fa-caret-right"></i>
+
+		Gestion des chiffres d'affaires
+
+	</a>
+
+	<b class="arrow"></b>
+
+
+</li>
+<li class="">
+	<a href="entreprisenombreemploye">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion nombre employés
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="entrepriseservice">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion service entreprise
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="participantservice">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion Participants
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="participantcooperationsouhaite">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion cooperation souhaité
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="participantfoction">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion Fonction
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="pays">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion pays
+	</a>
+
+	<b class="arrow"></b>
+</li></li></li><li class=""><a href="#" class="dropdown-toggle">
+<i class="menu-icon fa fa-caret-right"></i>
+
+Gestion des secteurs
+<b class="arrow fa fa-angle-down"></b></a><b class="arrow"></b><ul class="submenu">
+<li class="">
+	<a href="entreprisesecteurprincipal">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion secteur principale
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+<li class="">
+	<a href="entreprisesecteur">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion secteur
+	</a>
+
+	<b class="arrow"></b>
+</li>
+
+
+<li class="">
+	<a href="entreprisesoussecteur">
+		<i class="menu-icon fa fa-caret-right"></i>
+		Gestion sous secteur
+	</a>
+
+	<b class="arrow"></b>
+</li></ul></li></li></li></ul></li><li class=""><a href="users"><i class="menu-icon fa fa-user"></i><span class="menu-text">Fiche AdminEntreprise</span></a><b class="arrow"></b></li><li class=""><a href="entreprise"><i class="fa fa-list-alt" aria-hidden="true"></i><span class="menu-text">Fiche Entreprise</span></a><b class="arrow"></b></li><li class=""><a href="{{ path('user_collaborateur') }}"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;<span class="menu-text">Gestion des collaborateurs</span></a><b class="arrow"></b></li><li class=""><a href="invit"><i class="fa fa-envelope" aria-hidden="true"></i><span class="menu-text">Inviter des collaborateurs</span></a><b class="arrow"></b></li><li class=""><a href="choix"><i class=""></i><span class="menu-text">Gestion des choix de rencontres</span></a><b class="arrow"></b></li><li class=""><a href="calender"><i class="menu-icon fa fa-calendar"></i><span class="menu-text">Calendrier<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="widgets.html"><i class="menu-icon fa fa-signal"></i><span class="menu-text">Statistiques</span></a><b class="arrow"></b></li></ul></li>{% endif %}{% if is_granted('ROLE_ADMIN') %}<ul class="nav nav-list"><li class="active"><a href="admin"><i class="menu-icon fa fa-home"></i><span class="menu-text">Accueil</span></a><b class="arrow"></b></li><li class=""><a href="#" class="dropdown-toggle"><i class="fa fa-cog fa-fw" aria-hidden="true"></i><span class="menu-text">Paramétrages</span><b class="arrow fa fa-angle-down"></b></a><b class="arrow"></b><ul class="submenu"><li class=""><a href="entreprisechiffreaffaire" class="dropdown-toggle"><i class="menu-icon fa fa-caret-right"></i>Gestion des chiffres d'affaires</a><b class="arrow"></b></li><li class=""><a href="entreprisenombreemploye"><i class="menu-icon fa fa-caret-right"></i>Gestion nombre employés</a><b class="arrow"></b></li><li class=""><a href="entrepriseservice"><i class="menu-icon fa fa-caret-right"></i>Gestion service entreprise</a><b class="arrow"></b></li><li class=""><a href="participantservice"><i class="menu-icon fa fa-caret-right"></i>Gestion Participants</a><b class="arrow"></b></li><li class=""><a href="participantcooperationsouhaite"><i class="menu-icon fa fa-caret-right"></i>Gestion cooperation souhaité</a><b class="arrow"></b></li><li class=""><a href="participantfoction"><i class="menu-icon fa fa-caret-right"></i>Gestion Fonction</a><b class="arrow"></b></li><li class=""><a href="pays"><i class="menu-icon fa fa-caret-right"></i>Gestion pays</a><b class="arrow"></b></li></li></li><li class=""><a href="#" class="dropdown-toggle"><i class="menu-icon fa fa-caret-right"></i>Gestion des secteurs<b class="arrow fa fa-angle-down"></b></a><b class="arrow"></b><ul class="submenu"><li class=""><a href="entreprisesecteurprincipal"><i class="menu-icon fa fa-caret-right"></i>Gestion secteur principale</a><b class="arrow"></b></li><li class=""><a href="entreprisesecteur"><i class="menu-icon fa fa-caret-right"></i>Gestion secteur</a><b class="arrow"></b></li><li class=""><a href="entreprisesoussecteur"><i class="menu-icon fa fa-caret-right"></i>Gestion sous secteur</a><b class="arrow"></b></li></ul></li></li></li> </ul></li><li class=""> <a href="#" class="dropdown-toggle"><i class="menu-icon fa fa-list"></i><span class="menu-text">Gestion salon</span><b class="arrow fa fa-angle-down"></b> </a> <b class="arrow"></b> <ul class="submenu"><li class=""><a href="salon"><i class="menu-icon fa fa-caret-right"></i>Gestion salon global</a><b class="arrow"></b></li><li class=""><a href="salonedition"><i class="menu-icon fa fa-caret-right"></i>Gestion salon édition</a><b class="arrow"></b></li> </ul></li><li class=""> <a href="#"><i class="fa fa-usd" aria-hidden="true"></i>&nbsp;<span class="menu-text">Gestion tarif<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span> </li></li></a><b class="arrow"></b></li><li class=""><a href="salonsalle"><i class=""></i><span class="menu-text">Gestion salle<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="entreprise"><i class=""></i><span class="menu-text">Gestion Entreprise</span></a><b class="arrow"></b></li><li class="menu-icon fa fa-list"><a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i><span class="menu-text">Liste des entreprises<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="invit"><i class="fa fa-envelope" aria-hidden="true"></i><span class="menu-text">Inviter une entreprise<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="/user/alladminentreprise"><i class=""></i><span class="menu-text">Participants d'une entreprise<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="calendar.html"><i class="menu-icon fa fa-user"></i><span class="menu-text">Détails d'un participant<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="calender"><i class="menu-icon fa fa-calendar"></i><span class="menu-text">Calendrier<span class="badge badge-transparent tooltip-error" title="2 Important Events"></span></span></a><b class="arrow"></b></li><li class=""><a href="widgets.html"><i class="menu-icon fa fa-signal"></i><span class="menu-text">Statistiques</span></a><b class="arrow"></b></li></ul></li>{% endif %}<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse"><i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i></div></div>
+														

@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entreprise{% endblock %}
+
+{% block body %}
+    <h1>Entreprise</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Reference</th>
+                <td>{{ entreprise.reference }}</td>
+            </tr>
+            <tr>
+                <th>Nombreemployereference</th>
+                <td>{{ entreprise.nombreemployereference }}</td>
+            </tr>
+            <tr>
+                <th>Soussecteurreference</th>
+                <td>{{ entreprise.soussecteurreference }}</td>
+            </tr>
+            <tr>
+                <th>Chiffreaffairereference</th>
+                <td>{{ entreprise.chiffreaffairereference }}</td>
+            </tr>
+            <tr>
+                <th>Paysreference</th>
+                <td>{{ entreprise.paysreference }}</td>
+            </tr>
+            <tr>
+                <th>Servicereference</th>
+                <td>{{ entreprise.servicereference }}</td>
+            </tr>
+            <tr>
+                <th>Denomination</th>
+                <td>{{ entreprise.denomination }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ entreprise.logo }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entreprise.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entreprise.email }}</td>
+            </tr>
+            <tr>
+                <th>Siteweb</th>
+                <td>{{ entreprise.siteweb }}</td>
+            </tr>
+            <tr>
+                <th>Nombreclient</th>
+                <td>{{ entreprise.nombreclient }}</td>
+            </tr>
+            <tr>
+                <th>Pourcentageca</th>
+                <td>{{ entreprise.pourcentageca }}</td>
+            </tr>
+            <tr>
+                <th>Prixinnovation</th>
+                <td>{{ entreprise.prixinnovation }}</td>
+            </tr>
+            <tr>
+                <th>Cellulaire</th>
+                <td>{{ entreprise.cellulaire }}</td>
+            </tr>
+            <tr>
+                <th>Telephone1</th>
+                <td>{{ entreprise.telephone1 }}</td>
+            </tr>
+            <tr>
+                <th>Telephone2</th>
+                <td>{{ entreprise.telephone2 }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ entreprise.fax }}</td>
+            </tr>
+            <tr>
+                <th>Transferexport</th>
+                <td>{{ entreprise.transferexport }}</td>
+            </tr>
+            <tr>
+                <th>Export</th>
+                <td>{{ entreprise.export }}</td>
+            </tr>
+            <tr>
+                <th>Client</th>
+                <td>{{ entreprise.client }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('entreprise_index') }}">back to list</a>
+
+    <a href="{{ path('entreprise_edit', {'reference': entreprise.reference}) }}">edit</a>
+
+    {{ include('entreprise/_delete_form.html.twig') }}
+{% endblock %}

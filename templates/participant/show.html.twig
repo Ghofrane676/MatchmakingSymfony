@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participant{% endblock %}
+
+{% block body %}
+    <h1>Participant</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Participantreference</th>
+                <td>{{ participant.participantreference }}</td>
+            </tr>
+            <tr>
+                <th>Entreprisereference</th>
+                <td>{{ participant.entreprisereference }}</td>
+            </tr>
+            <tr>
+                <th>Participantfonctionreference</th>
+                <td>{{ participant.participantfonctionreference }}</td>
+            </tr>
+            <tr>
+                <th>Participantservicereference</th>
+                <td>{{ participant.participantservicereference }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ participant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ participant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ participant.email }}</td>
+            </tr>
+            <tr>
+                <th>Photoprofil</th>
+                <td>{{ participant.photoprofil }}</td>
+            </tr>
+            <tr>
+                <th>Civilite</th>
+                <td>{{ participant.civilite }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ participant.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ participant.fax }}</td>
+            </tr>
+            <tr>
+                <th>Gsm</th>
+                <td>{{ participant.gsm }}</td>
+            </tr>
+            <tr>
+                <th>Linkedin</th>
+                <td>{{ participant.linkedin }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('participant_index') }}">back to list</a>
+
+    <a href="{{ path('participant_edit', {'participantreference': participant.participantreference}) }}">edit</a>
+
+    {{ include('participant/_delete_form.html.twig') }}
+{% endblock %}

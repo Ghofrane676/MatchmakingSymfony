@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salon{% endblock %}
+
+{% block body %}
+    <h1>Salon</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Salonreference</th>
+                <td>{{ salon.salonreference }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ salon.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ salon.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('salon_index') }}">back to list</a>
+
+    <a href="{{ path('salon_edit', {'salonreference': salon.salonreference}) }}">edit</a>
+
+    {{ include('salon/_delete_form.html.twig') }}
+{% endblock %}
